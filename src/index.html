@@ -9,10 +9,20 @@
     <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="bg-page flex-col min-h-screen justify-center items-center">
+    <main class="w-full p-4 max-w-xl">
+        <h1 class="text-center text-3xl text-white font-bold">
+            hydrapp
+        </h1>
+        <img class="w-full" src="./glass.png" alt="szklanka wody">
+    
+        
+    <div class="flex justify-center items-center gap-6">
+            <button class="text-black h-12 w-56 rounded-md bg-white"> dodaj szklankę</button>
+            <button class="text-red-700 h-12 w-56"> usuń szklankę</button>
+    </div>
+</main>
+    <script src="./main.js" type="module"></script>
 </body>
 
 </html>
