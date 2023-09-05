@@ -7,20 +7,21 @@
     <link href="./index.css" rel="stylesheet">
     <title>MY HYDRAPP</title>
     <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-page flex flex-col min-h-screen justify-center items-center">
+<body class="bg-page font-roboto flex flex-col min-h-screen justify-center items-center">
     <main class="w-full p-4 max-w-xl">
-        <h1 class="text-center mb-4 text-6xl text-white font-bold">
+        <h1 class="text-center mb-4 text-6xl text-white">
             hydrapp
         </h1>
         <div class="flex justify-center items-center">
             <img class=" relative w-full z-0" src="./glass.png" alt="szklanka wody">
-            <p class="absolute text-black z-10 text-9xl font-bold"> 0 </p>
+            <p class="absolute text-black z-10 text-9xl"> 0 </p>
         </div>
         <div class="flex flex-col justify-center items-center">
-            <button class="text-black mb-4 h-12 w-56 rounded-md font-bold bg-white"> dodaj szklankę</button>
-            <button class="text-red-700 h-12 w-56 font-bold"> usuń szklankę</button>
+            <button class="text-black mb-4 h-12 w-56 rounded-md bg-white"> dodaj szklankę</button>
+            <button class="text-red-700 h-12 w-56"> usuń szklankę</button>
         </div>
     </main>
     <script src="./main.js" type="module"></script>

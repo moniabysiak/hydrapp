@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         "page":"#0F172A"
       },
+      fontFamily: {
+        "roboto": "'Roboto', sans-serif"
+      },
     },
   },
   plugins: [],
