@@ -17,5 +17,10 @@
     "@parcel/packager-raw-url": "^2.9.3",
     "@parcel/transformer-webmanifest": "^2.9.3",
     "tailwindcss": "^3.3.3"
+  },
+  "overrides": {
+    "@parcel/optimizer-htmlnano": {
+      "htmlnano": "2.0.3"
+    }
   }
 }
