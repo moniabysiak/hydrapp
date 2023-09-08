@@ -23,6 +23,7 @@ deleteGlass.addEventListener("click", function () {
 if (numberOfGlasses == null) {
     localStorage.setItem(key, 0);
     counter.innerHTML = 0;
+    numberOfGlasses = 0;
   } else {
     counter.innerHTML = numberOfGlasses;
   }
