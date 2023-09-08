@@ -5,6 +5,17 @@ const counter = document.querySelector('.counter--js');
 const key = new Date().toISOString().slice(0, 10)
 var numberOfGlasses = 0;
 
+let checkGlasses = localStorage.getItem(key);
+console.log(checkGlasses);
+
+if (checkGlasses == null) {
+  localStorage.setItem(key, 0);
+  counter.innerHTML = numberOfGlasses;
+} else {
+  numberOfGlasses = parseInt(checkGlasses);
+  counter.innerHTML = numberOfGlasses;
+}
+
 addGlass.addEventListener("click", function () {
   numberOfGlasses += 1;
   counter.innerHTML = numberOfGlasses;
@@ -19,12 +30,3 @@ deleteGlass.addEventListener("click", function () {
   localStorage.setItem(key, numberOfGlasses);
 })
 
-let checkGlasses = parseInt(localStorage.getItem(key));
-console.log(checkGlasses);
-
-if (localStorage.getItem(key) == null) {
-  localStorage.setItem(key, 0);
-} else {
-  numberOfGlasses = checkGlasses;
-  counter.innerHTML = checkGlasses;
-}
