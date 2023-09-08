@@ -9,8 +9,7 @@ addGlass.addEventListener("click", function () {
   numberOfGlasses += 1;
   counter.innerHTML = numberOfGlasses;
   localStorage.setItem(key, numberOfGlasses);
-}
-)
+})
 
 deleteGlass.addEventListener("click", function () {
   if (numberOfGlasses > 0) {
@@ -23,7 +22,7 @@ deleteGlass.addEventListener("click", function () {
 let checkGlasses = parseInt(localStorage.getItem(key));
 console.log(checkGlasses);
 
-if (checkGlasses == null) {
+if (localStorage.getItem(key) == null) {
   localStorage.setItem(key, 0);
 } else {
   numberOfGlasses = checkGlasses;
