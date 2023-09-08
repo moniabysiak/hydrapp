@@ -3,7 +3,7 @@ const deleteGlass = document.querySelector('.delete--glass--js');
 const counter = document.querySelector('.counter--js');
 
 const key = new Date().toISOString().slice(0, 10)
-var numberOfGlasses = 0;
+var numberOfGlasses = parseInt(localStorage.getItem(key));
 
 addGlass.addEventListener("click", function () {
   numberOfGlasses += 1;
@@ -20,12 +20,9 @@ deleteGlass.addEventListener("click", function () {
   localStorage.setItem(key, numberOfGlasses);
 })
 
-let checkGlasses = parseInt(localStorage.getItem(key));
-console.log(checkGlasses);
-
-if (checkGlasses == null) {
-  localStorage.setItem(key, 0);
-} else {
-  numberOfGlasses = checkGlasses;
-  counter.innerHTML = checkGlasses;
-}
+if (numberOfGlasses == null) {
+    localStorage.setItem(key, 0);
+    counter.innerHTML = 0;
+  } else {
+    counter.innerHTML = numberOfGlasses;
+  }
