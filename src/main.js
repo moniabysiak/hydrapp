@@ -20,8 +20,12 @@ deleteGlass.addEventListener("click", function () {
   localStorage.setItem(key, numberOfGlasses);
 })
 
-let checkGlasses = localStorage.getItem(parseInt(numberOfGlasses));
+let checkGlasses = parseInt(localStorage.getItem(key));
+console.log(checkGlasses);
 
-if (!checkGlasses) {
+if (checkGlasses == null) {
   localStorage.setItem(key, 0);
+} else {
+  numberOfGlasses = checkGlasses;
+  counter.innerHTML = checkGlasses;
 }
