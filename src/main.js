@@ -10,10 +10,12 @@ console.log(checkGlasses);
 
 if (checkGlasses == null) {
   localStorage.setItem(key, 0);
+  counter.innerHTML = numberOfGlasses;
 } else {
   numberOfGlasses = parseInt(checkGlasses);
+  counter.innerHTML = numberOfGlasses;
 }
-counter.innerHTML = numberOfGlasses;
+
 
 addGlass.addEventListener("click", function () {
   numberOfGlasses += 1;
