@@ -6,16 +6,18 @@ let key = new Date().toLocaleString().slice(0, 10)
 let numberOfGlasses = 0;
 
 setInterval(() => {
-  if(key !== new Date().toLocaleString().slice(0, 10)) {
+  if (key !== new Date().toLocaleString().slice(0, 10)) {
     key = new Date().toLocaleString().slice(0, 10)
     numberOfGlasses = 0
+    counter.innerHTML = numberOfGlasses
+    localStorage.setItem(key, 0)
   }
 }, 1000*60 )
 
 let checkGlasses = localStorage.getItem(key);
 console.log(checkGlasses);
 
-if (checkGlasses == null) {
+if (checkGlasses === null) {
   localStorage.setItem(key, 0);
 } else {
   numberOfGlasses = parseInt(checkGlasses);
